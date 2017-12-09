@@ -66,4 +66,58 @@ body {
 
 .label::before {
   content: '>';
+  /* text-shadow: 0 0 2px lightgreen; */
+}
+
+.help {
+  margin-top: 100px;
+}
+
+.help-button {
+  position: relative;
+  border: 1px solid lightgreen;
+  border-radius: 50%;
+  background: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+  
+.help-button::before {
+  color: lightgreen;
+  font-size: 20px;
+  line-height: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  content: '?';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 18px;
+  width: 18px;
+}
+
+.help-button:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px lightgreen;
+}
+
+.help-button:hover {
+  background-color: lightgreen;
+}
+
+.help-button:hover::before {
+  color: #000;
+}
+
+.rules-box {
+  overflow: hidden;
+  height: 0;
+  transition: height 300ms ease;
+}
+
+.rules-box.opened {
+  height: 200px;
 }
