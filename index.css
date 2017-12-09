@@ -1,0 +1,69 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #000;
+  color: lightgreen;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.visibilityHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+#game {
+  height: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-form {
+  width: 500px;
+}
+
+#game-text {
+  line-height: 1em;
+  min-height: 1em;
+}
+
+.input {
+  background-color: #000;
+  color: lightgreen;
+  font-size: 20px;
+  line-height: 1em;
+  border: none;
+  min-width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.label {
+  position: relative;
+}
+
+.label.disabled::before {
+  content: '';
+}
+
+.label::before {
+  content: '>';
+}
