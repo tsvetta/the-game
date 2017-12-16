@@ -1,8 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const ENV_DEVELOPMENT = true;
+
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/index.js', 
+    './src/index.css',
+  ],
   devServer: {
     publicPath: '/assets/',
     contentBase: path.resolve(__dirname, 'src'),
@@ -17,7 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       }
     ],
   },
